@@ -10,4 +10,15 @@ public class BoardController_01{
     public String actionHome(){
         return "home_01";
     }
+
+    @RequestMapping(value="/board_01/list_01", method = RequestMethod.GET )
+    public void actionList(){
+        
+    }
+    //
+    // public String actionList(){
+    //     return "list_01";
+    // }
+    //이건작동안한다
 }
+
