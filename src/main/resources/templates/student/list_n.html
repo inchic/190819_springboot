@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="https://thymeleaf.org/">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+    <script src="../../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+
+</head>
+
+<body>
+    <div class="container p-2">
+        <h2>Map</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>아이디</th>
+                    <th>이름</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- <td th:text="${resultMap.MEMBER_ID}"></td> -->
+                    <!-- <td th:text="${resultMap.NAME}"></td> -->
+                </tr>
+            </tbody>
+        </table>
+        <h2>List</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>아이디</th>
+                    <th>이름</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="resultData : ${resultList}">
+                    <!-- <td th:text="${resultData.MEMBER_ID}"></td> -->
+                    <td th:text="${resultData.id}"></td>
+                    <!-- <td th:text="${resultData.NAME}"></td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
